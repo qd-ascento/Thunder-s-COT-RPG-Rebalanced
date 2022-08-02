@@ -96,20 +96,15 @@ end
 
 function modifier_padla_opyt_aura:DeclareFunctions()
     local funcs = {
-        MODIFIER_PROPERTY_EXP_RATE_BOOST,
 		MODIFIER_EVENT_ON_DEATH,
+		MODIFIER_PROPERTY_TOOLTIP,
     }
     return funcs
 end
 
-
-function modifier_padla_opyt_aura:GetModifierPercentageExpRateBoost()
-	local bonus_xp = self.bonus_xp
-	if self.casterName ~= "npc_dota_hero_riki" then
-		bonus_xp = bonus_xp * -1
-	end
-	print(self.casterName .. " Отладка получает опыт: " .. bonus_xp)
-		return bonus_xp
+function modifier_padla_opyt_aura:OnTooltip()
+	
+	return self.bonus_gold
 end
 
 
@@ -120,20 +115,33 @@ function modifier_padla_opyt_aura:OnDeath(data)
 	local unit = data.unit
     local ability = self:GetAbility()
 	local share_gold = (self.bonus_gold/100)
-
-	print("Отладка caster: " .. caster)
-	print("Отладка parent: " .. caster)
+	local share_xp = (self.bonus_gold/100)
 
     if parent == attacker then
 			local gold = unit:GetGoldBounty()*share_gold
-			local player = PlayerResource:GetPlayer(caster:GetPlayerID())
+			local xp = unit:GetDeathXP()*share_xp
+			local player = PlayerResource:GetPlayer(parent:GetPlayerID())
+			local hozyain = PlayerResource:GetPlayer(caster:GetPlayerID())
 
-			if caster:GetName() ~= "npc_dota_hero_riki" then
-				gold = gold * -1
+			if caster:GetName() == "npc_dota_hero_riki" and caster ~= attacker then
+				print(caster:GetName() .. " Отладка получает золото: " .. gold)
+				print(caster:GetName() .. " Отладка получает опыт: " .. xp)
+				SendOverheadEventMessage( hozyain, OVERHEAD_ALERT_GOLD, caster, gold, nil )
+
+				caster:AddExperience(xp, 0, false, false) 
+				caster:ModifyGold(gold, false, 0)
 			end
-			print(caster:GetName() .. "Отладка получает золото: " .. gold)
-			SendOverheadEventMessage( player, OVERHEAD_ALERT_GOLD, caster, gold, nil )
-			caster:ModifyGold(gold, false, 0)
+
+			if parent:GetName() ~= "npc_dota_hero_riki" and caster ~= attacker then
+				gold = gold * -1
+				xp = xp * -1
+				print(parent:GetName() .. " Отладка теряет золото: " .. gold)
+				print(parent:GetName() .. " Отладка теряет опыт: " .. xp)
+
+				parent:AddExperience(xp, 0, false, false) 
+				parent:ModifyGold(gold, false, 0)
+			end
+			
    end
 end
 

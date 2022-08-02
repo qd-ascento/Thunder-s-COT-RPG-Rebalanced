@@ -9761,35 +9761,114 @@
 }
 
         //=================================================================================================================
-	// Recipe: vladmir2
-	//=================================================================================================================
+  // Recipe: vladmir1
+  //=================================================================================================================
+
+        "item_recipe_vladmir"
+{
+    "AbilityTextureName"        "recipe"
+    
+  "Model"             "models/props_gameplay/recipe.vmdl"
+  "BaseClass"                     "item_datadriven"
+  
+  "ItemCost"            "250"  
+  "ItemShopTags"          "artifacts"
+  
+  "ItemRecipe"          "1"
+
+}
+
+        //=================================================================================================================
+	// Item: vladmir
+	"item_vladmir"
+  {
+
+"ItemCost"            "2450"
+    "ItemStackable"         "0"
+  
+  "ItemPermanent"         "0"
+  "ItemKillable"                  "1"
+  "ItemSellable"                  "1"
+  "ItemDroppable"                 "1"
+  "ItemPurchasable"       "1"
+
+    "ItemBaseLevel"         "1"
+    
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+  {
+      "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "bonus_all_stats"   "2 15 45 150"
+      } 
+      "02"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "hp_regen"        "0 5 15 50"
+      }
+      "03"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "mana_regen_aura"   "1.75 5 10 30"
+      }
+      "04"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "armor_aura"      "3 12 20 30"
+      }
+      "05"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "damage_aura"     "18 36 54 72"
+      }     
+      "06"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "lifesteal_aura"      "15 22.5 30 40"
+      }
+      "07"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "lifesteal_aura_ranged"     "15 20 25 35"
+      }
+      "08"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "aura_radius" "1500"
+      }
+  }
+  }
+
+//=================================================================================================================
+  // Recipe: vladmir2
+  //=================================================================================================================
 
         "item_recipe_vladmir2"
 {
-		"AbilityTextureName" 				"recipe"
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"ID"							"3109"						
-	"Model"							"models/props_gameplay/recipe.vmdl"
-	"BaseClass"                     "item_datadriven"
-	
-	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"2500"	
-	"ItemShopTags"					"artifacts"
-	
-	// Recipe
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemRecipe"					"1"
-	"ItemResult"					"item_vladmir2"
-	"ItemRequirements"
-	{
-		"01"						"item_vladmir;item_roshan_soul"
-	}
+    "AbilityTextureName"        "recipe"
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "ID"              "3109"            
+  "Model"             "models/props_gameplay/recipe.vmdl"
+  "BaseClass"                     "item_datadriven"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "2500"  
+  "ItemShopTags"          "artifacts"
+  
+  // Recipe
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemRecipe"          "1"
+  "ItemResult"          "item_vladmir2"
+  "ItemRequirements"
+  {
+    "01"            "item_vladmir;item_roshan_soul"
+  }
 }
-        //=================================================================================================================
-	// Item: vladmir2
-	//=================================================================================================================
+
+  //=================================================================================================================
         "item_vladmir2"
 {       
 	// General
@@ -9804,7 +9883,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"9500"
+	"ItemCost"						"6950"
 	"ItemStackable"					"0"
 	
 	"ItemPermanent"					"0"
@@ -9861,55 +9940,7 @@
 	}
 }
 
-	"item_vladmir"
-	{
-		"ItemBaseLevel"					"1"
-		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-	{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_all_stats"		"2 15 45 150"
-			}	
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"hp_regen"				"0 5 15 50"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"mana_regen_aura"		"1.75 5 10 30"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"armor_aura"			"3 12 20 30"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_aura"			"18 36 54 72"
-			}			
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lifesteal_aura"			"15 22.5 30 40"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lifesteal_aura_ranged"			"15 20 25 35"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"aura_radius"	"1500"
-			}
-	}
-	}
+	
 
 
 
@@ -9958,7 +9989,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"9500"
+	"ItemCost"						"12950"
 	"ItemStackable"					"0"
 	
 	"ItemPermanent"					"0"
@@ -10015,55 +10046,7 @@
   }
 }
 
-	"item_vladmir"
-	{
-		"ItemBaseLevel"					"1"
-		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-	{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_all_stats"		"2 15 45 150"
-			}	
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"hp_regen"				"0 5 15 50"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"mana_regen_aura"		"1.75 5 10 30"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"armor_aura"			"3 12 20 30"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_aura"			"18 36 54 72"
-			}			
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lifesteal_aura"			"15 22.5 30 40"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lifesteal_aura_ranged"			"15 20 25 35"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"aura_radius"	"1500"
-			}
-	}
-	}
+	
 
 
 
@@ -10111,7 +10094,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"9500"
+	"ItemCost"						"12950"
 	"ItemStackable"					"0"
 	
 	"ItemPermanent"					"0"
@@ -10168,55 +10151,7 @@
   }
 }
 
-	"item_vladmir"
-	{
-		"ItemBaseLevel"					"1"
-		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-	{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_all_stats"		"2 15 45 150"
-			}	
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"hp_regen"				"0 5 15 50"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"mana_regen_aura"		"1.75 5 10 30"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"armor_aura"			"3 12 20 30"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_aura"			"18 36 54 72"
-			}			
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lifesteal_aura"			"15 22.5 30 40"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lifesteal_aura_ranged"			"15 20 25 35"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"aura_radius"	"1500"
-			}
-	}
-	}
+	
         //=================================================================================================================
 	// Recipe: Veil Of Discord3
 	//=================================================================================================================
