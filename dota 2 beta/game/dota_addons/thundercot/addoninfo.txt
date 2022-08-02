@@ -1,0 +1,44 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	HideInTools = false
+	IsPlayable = true
+	IsTemplate = false
+	maps = 
+	[
+		"tcotrpg",
+		"tcotrpg_1v1",
+		"5v5",
+		"",
+	]
+	CheckAFKPlayers = false
+	DefaultMap = "tcotrpg"
+	Default_Keys = null
+	DisableIK = false
+	EnablePickRules = false
+	EventGame = false
+	hero_picker = null
+	HeroGuidesSupported = true
+	ForceDefaultGuide = true
+	MinimalPrecache = false
+	MinPlayers = 1
+	MaxPlayers = 10
+	map_options = 
+	[
+		{
+			map = "tcotrpg"
+			MinPlayers = 1
+			MaxPlayers = 5
+		},
+		{
+			map = "tcotrpg_1v1"
+			MinPlayers = 1
+			MaxPlayers = 2
+		},
+		{
+			map = "5v5"
+			MinPlayers = 1
+		},
+	]
+	PenaltiesEnabled = false
+	TeamCount = -1
+}

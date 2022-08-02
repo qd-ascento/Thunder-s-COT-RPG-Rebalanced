@@ -1,0 +1,8 @@
+"Layer0"
+{
+	"shader"	"ui.vfx"
+	"F_TRANSLUCENT"	"0"
+	"g_tColor"	"materials/overviews/tcotrpg_5v5_tga_d0bcf67d.vtex"
+	"RepresentativeTextureHeight"	"512"
+	"RepresentativeTextureWidth"	"512"
+}

@@ -1,0 +1,26 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{f9a1c8c4-159b-4786-b740-4d1a118c8f46} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_sara/space_dissection_hit_src.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_sara/space_dissection_hit_tgt.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_sara/space_dissection_head_flash.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_sara/space_dissection_splatter_head.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 12
+}

@@ -1,0 +1,78 @@
+"DOTAAbilities"
+{
+    "follower_spider_sticky_snare"
+    {
+        "BaseClass" "broodmother_sticky_snare"
+        "AbilityTextureName" "broodmother_sticky_snare"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_CHANNELLED "
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "3"
+        "HasScepterUpgrade"             "0"
+        "IsGrantedByScepter"            "0"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "600"
+        "AbilityCastPoint"              "0"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCharges"                "1"
+        "AbilityChargeRestoreTime"      "20 15 10"   
+
+        "AbilityCooldown" "20 15 10"     
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "formation_delay"       "0.1"
+            "root_duration"         "0.50 0.75 1.0"
+            "damage_per_second"     "250 500 1000"
+            "count"                 "1"
+            "width"                 "150"
+            
+        }
+    }
+
+    "spider_bite"
+    {
+        "BaseClass" "broodmother_incapacitating_bite"
+        "AbilityTextureName" "broodmother_incapacitating_bite"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+            "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+            "MaxLevel" "3"
+                
+            // Special
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                    "var_type"              "FIELD_INTEGER"
+                    "miss_chance"           "30 40 50"
+                }
+                "02"
+                {
+                    "var_type"              "FIELD_INTEGER"
+                    "bonus_movespeed"       "-20 -40 -60"
+                }
+                "03"
+                {
+                    "var_type"              "FIELD_FLOAT"
+                    "duration"          "2.0 2.5 3.0"
+                }
+            }
+    }
+}

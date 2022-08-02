@@ -1,0 +1,151 @@
+"DOTAAbilities"
+{
+	"padla_zoloto"
+	{
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"heroes/hero_padla/zoloto"
+		"AbilityTextureName"			"padla/zoloto"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_CHANNEL"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+
+		"MaxLevel" 						"7"
+
+		"AbilityManaCost"               "50 100 150 200 250 300 350"
+
+		"AbilityCooldown"				"40.0 45.0 50.0 55.0 60.0 65.0 70.0"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold"			"50 100 150 200 250 300 350"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_pct"			"1 2 4 8 12 16 20"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"cooldown"		"40.0 45.0 50.0 55.0 60.0 65.0 70.0"
+			}
+		}
+	}
+
+	"padla_opyt"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_padla/opyt"
+		"AbilityTextureName"			"padla/opyt"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+
+		"MaxLevel"						"7"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_xp"		"20 25 30 35 40 45 50"
+			}
+
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_gold"			"20 25 30 35 40 45 50"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"            "1250"
+			}
+
+		}
+	}
+
+
+	"padla_gavno"
+	{
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"heroes/hero_padla/gavno"
+		"AbilityTextureName"			"padla/gavno"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+
+		"MaxLevel" 						"7"
+
+		"AbilityManaCost"               "25 50 75 100 125 150 175" 
+
+		"AbilityCooldown"				"10.0"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_speed"			"500"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_pct"				"10 15 20 25 30 45 50"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"2 2.5 3 3.5 4 4.5 5"
+			}
+		}
+
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
+			"particle"	"particles/arena/units/heroes/hero_sai/invulnerability.vpcf"
+		}
+	}
+
+	"padla_damage"
+	{
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"heroes/hero_padla/damage"
+		"AbilityTextureName"			"padla/damage"
+
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+
+		"AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"MaxLevel" 						"7"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_pct"				"20 25 30 35 40 45 50"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"            "1250"
+			}
+		}
+
+	}
+}

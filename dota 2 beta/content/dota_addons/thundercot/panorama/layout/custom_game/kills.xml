@@ -1,0 +1,41 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/custom_game/kills.css" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/custom_game/kills_selection.js" />
+		<include src="s2r://panorama/scripts/custom_game/wave_selection.js" />
+		<include src="s2r://panorama/scripts/custom_game/effect_selection.js" />
+		<include src="s2r://panorama/scripts/custom_game/kills.js" />
+	</scripts>
+	<snippets>
+		<snippet name="KillsSelection">
+			<Panel class="KillsSelection" hittest="false">
+				<TextButton id="DefaultValveButtonID" class="DefaultValveButtonClass" text="#DefaultValveButton" />
+			</Panel>
+		</snippet>
+		<snippet name="WaveSelection">
+			<Panel class="KillsSelection" hittest="false">
+				<TextButton id="DefaultValveButtonIDWAVE" class="DefaultValveButtonClassWAVE" text="#DefaultValveButton" />
+			</Panel>
+		</snippet>
+		<snippet name="EffectSelection">
+			<Panel class="KillsSelection" hittest="false">
+				<TextButton id="DefaultValveButtonIDEFFECT" class="DefaultValveButtonClassEFFECT" text="#DefaultValveButton" />
+			</Panel>
+		</snippet>
+	</snippets>
+	<Panel hittest="false" style="width: 100%; height: 100%;flow-children: down;">
+		<Label id="Header" />
+		<Panel id="Kills" />
+		<Label id="HeaderVoteWave" />
+		<Panel id="VoteForWave" />
+		<Label id="HeaderVoteEffects" />
+		<Panel id="VoteForEffects" />
+		<Button id="Instructions">
+			<Label id="HasVoted" />
+			<Label id="Discord" />
+		</Button>
+	</Panel>
+</root>

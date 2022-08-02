@@ -1,0 +1,9 @@
+#base "skafian/boss.txt"
+#base "spider/boss.txt"
+#base "reef/boss.txt"
+#base "mine/boss.txt"
+
+"DOTAAbilities"
+{
+
+}

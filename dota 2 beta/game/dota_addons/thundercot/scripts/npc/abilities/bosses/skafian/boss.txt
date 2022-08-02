@@ -1,0 +1,129 @@
+#base "follower.txt"
+
+"DOTAAbilities"
+{
+    "boss_skafian_fury_swipes"
+    {
+        "BaseClass"                     "ursa_fury_swipes"
+        "AbilityTextureName"            "ursa_fury_swipes"
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "3"
+        
+        // Ability General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+                
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "bonus_reset_time"              
+                {
+                    "value"                     "5 6 7"
+                    "special_bonus_unique_ursa_4" "+0"
+                }
+                "bonus_reset_time_roshan"       "0"
+                "damage_per_stack"              
+                {
+                    "value"                 "5 10 20"
+                    "LinkedSpecialBonus"            "special_bonus_unique_ursa"
+                }
+        }
+    }
+
+    "boss_skafian_entangle"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "lone_druid_spirit_bear_entangle"
+        "AbilityTextureName" "lone_druid_spirit_bear_entangle"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "AbilitySound"                  "LoneDruid_SpiritBear.Entangle"
+        "MaxLevel" "3"
+
+        // Damage.
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityDamage"                 "500 1000 2000"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "5.0 4.0 3.0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "damage"                "500 1000 2000"
+                "entangle_chance"       "20 25 30"
+                "hero_duration"         "1.0 1.5 2.0"
+                "creep_damage_multiplier"       "0"
+                "hero_entangle_chance"      "20 25 30"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+    }
+
+    "boss_skafian_enrage"
+    {
+        // General
+        "BaseClass" "ursa_enrage"
+        "AbilityTextureName" "ursa_enrage"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_Ursa.Enrage"
+        "MaxLevel" "3"
+        "HasScepterUpgrade"         "0"
+        
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastAnimation"          "ACT_DOTA_OVERRIDE_ABILITY_4"
+        "AbilityCastGestureSlot"        "DEFAULT"
+        "AbilityCastRange"              "0"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "20 15 10"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0 0 0"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {           
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "damage_reduction"          "80"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "status_resistance"         "100"
+                "LinkedSpecialBonus"            "special_bonus_unique_ursa_8"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "duration"                  "2.0 3.0 4.0"
+                "LinkedSpecialBonus"    "special_bonus_unique_ursa_3"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "cooldown_scepter"          "0"
+                "RequiresScepter"           "1"
+            }
+        }
+    }
+}

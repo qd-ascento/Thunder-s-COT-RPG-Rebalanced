@@ -1,0 +1,8 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
+<root>
+	<scripts>
+		<include src="s2r://panorama/scripts/selection/selection.js" />
+		<include src="s2r://panorama/scripts/selection/selection_filter.js" />
+	</scripts>
+	<Panel />
+</root>

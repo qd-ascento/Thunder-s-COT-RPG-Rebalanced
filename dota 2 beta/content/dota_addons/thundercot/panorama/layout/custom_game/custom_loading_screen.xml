@@ -1,0 +1,12 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/custom_loading_screen.css" />
+	</styles>
+	<Panel class="AddonLoadingRoot">
+		<Panel id="CustomBg">
+			<Image id="gamemode" class="SeqImg" src="s2r://panorama/images/custom_game/loading_screen/gamemode_png.vtex" />
+		</Panel>
+		<Panel id="TitlePanel" />
+	</Panel>
+</root>

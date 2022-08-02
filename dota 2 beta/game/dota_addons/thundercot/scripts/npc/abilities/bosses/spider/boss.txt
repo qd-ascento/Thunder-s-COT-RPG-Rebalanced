@@ -1,0 +1,97 @@
+#base "follower.txt"
+
+"DOTAAbilities"
+{
+    "boss_spider_silken_bola"
+    {
+        "BaseClass" "broodmother_silken_bola"
+        "AbilityTextureName" "broodmother_silken_bola"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "FightRecapLevel"               "1"
+        "HasShardUpgrade"               "0"
+        "MaxLevel" "3"
+        
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "900"
+        "AbilityCastPoint"              "0"
+        
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "20 15 10"
+
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityModifierSupportValue"   "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "movement_speed"            
+            {
+                    "value"     "99999"
+                    "special_bonus_unique_broodmother_4"    "+0"
+            }
+            "duration"              "3 4 5"
+            "projectile_speed"  "1200"
+            "impact_damage"         
+            {
+                    "value"             "150 300 600"
+                    "DamageTypeTooltip" "DAMAGE_TYPE_MAGICAL"
+            }
+            "attack_damage"         
+            {
+                    "value"             "10 20 30"
+                    "DamageTypeTooltip"         "DAMAGE_TYPE_MAGICAL"
+            }
+            "miss_chance"           "25 50 75"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+    }
+
+    "boss_spider_insatiable_hunger"
+    {
+        "BaseClass" "broodmother_insatiable_hunger"
+        "AbilityTextureName" "broodmother_insatiable_hunger"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "FightRecapLevel"               "2"
+        "MaxLevel" "3"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+
+        "AbilityCooldown"               "40 35 30"
+        "AbilityManaCost"               "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "bonus_damage"          
+            {
+                "value"                 "100 200 400"
+                "special_bonus_unique_broodmother_1"    "+0"
+            }
+            "lifesteal_pct"         
+            {
+                "value"             "50 75 100"
+                "special_bonus_unique_broodmother_1"    "+0"
+            }
+            "duration"              "8 10 12"
+        }
+    }
+}

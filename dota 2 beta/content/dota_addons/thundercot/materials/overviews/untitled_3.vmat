@@ -1,0 +1,17 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "ui.vfx"
+
+	//---- Color ----
+	Texture "materials/overviews/untitled_3_tga_736420b0.png"
+
+
+	VariableState
+	{
+		"Color"
+		{
+		}
+	}
+}

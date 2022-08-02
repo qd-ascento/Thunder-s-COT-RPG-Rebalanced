@@ -1,0 +1,34 @@
+#base "follower.txt"
+
+"DOTAAbilities"
+{
+    "boss_mine_gold_steal"
+    {
+        "BaseClass" "ability_lua"
+        "ScriptFile" "heroes/bosses/kobold/gold.lua"
+        "AbilityTextureName" "greed"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
+        "MaxLevel" "3"
+        "AbilityCooldown" "5 4 3"
+
+        "precache"
+        {
+            "particle" "particles/items2_fx/hand_of_midas.vpcf"
+        }
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "gold_pct"              "1"
+
+            }
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
+    }
+}

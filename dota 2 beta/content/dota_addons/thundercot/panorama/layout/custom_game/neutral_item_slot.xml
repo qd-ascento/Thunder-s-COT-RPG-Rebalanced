@@ -1,0 +1,7 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
+<root>
+	<scripts>
+		<include src="s2r://panorama/scripts/custom_game/neutral_slot.js" />
+	</scripts>
+	<Panel hittest="false" />
+</root>

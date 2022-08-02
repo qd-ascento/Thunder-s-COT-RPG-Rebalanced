@@ -1,0 +1,25 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.css" />
+		<include src="s2r://panorama/styles/custom_game/game_info.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/custom_game/game_info_items.vjs_c" />
+	</scripts>
+	<Panel class="GameInfoMain">
+		<Panel id="Title">
+			<Label id="TitleName" text="#addon_game_name" />
+		</Panel>
+		<Panel id="Items" hittest="false">
+			<Label text="Physical Items" class="item_help_text" />
+			<Panel id="item_phys" class="item_container" hittest="false" />
+			<Label text="Magical Items" class="item_help_text" />
+			<Panel id="item_mag" class="item_container" hittest="false" />
+			<Label text="Books" class="item_help_text" />
+			<Panel id="item_books" class="item_container" hittest="false" />
+			<Label text="Other Items" class="item_help_text" />
+			<Panel id="item_other" class="item_container" hittest="false" />
+		</Panel>
+	</Panel>
+</root>

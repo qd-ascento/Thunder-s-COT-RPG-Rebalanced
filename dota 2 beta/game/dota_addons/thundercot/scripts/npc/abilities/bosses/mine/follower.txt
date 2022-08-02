@@ -1,0 +1,49 @@
+"DOTAAbilities"
+{
+    "centaur_khan_endurance_aura_custom"
+    {
+        "BaseClass" "centaur_khan_endurance_aura"
+        "AbilityTextureName" "centaur_khan_endurance_aura"
+        "MaxLevel"              "1"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"     
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_attack_speed"    "100 200 300"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "radius"                "600"
+            }
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+    }
+
+    "kobold_lucky_shot_custom"
+    {
+        "BaseClass" "pangolier_lucky_shot"
+        "AbilityTextureName" "kobold_disarm"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "MaxLevel" "3"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "chance_pct"            "17"
+                "duration"              "0.25"
+                "slow"          "0"
+                "armor"         "150 175 200"
+        }
+        
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
+    }
+}

@@ -1,0 +1,17 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "ui.vfx"
+
+	//---- Color ----
+	Texture "materials/overviews/tcotrpg_tga_4bb5c20.png"
+
+
+	VariableState
+	{
+		"Color"
+		{
+		}
+	}
+}

@@ -1,0 +1,19 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/custom_game/ui_duel_timer.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/custom_game/duel.vjs_c" />
+	</scripts>
+	<Panel class="TeamOverlay" hittest="false">
+		<Panel id="KillLimit" hittest="true" onactivate="OnKillimitClick()">
+			<Image src="s2r://" hittest="false" />
+			<Label hittest="false" id="KillLimit_text" text="" />
+		</Panel>
+		<Panel hittest="true" id="Block" onactivate="OnTimerClick()">
+			<Label id="DuelTextBlock" text="" hittest="false" />
+		</Panel>
+		<Label hittest="false" id="Attension" text="" />
+	</Panel>
+</root>
